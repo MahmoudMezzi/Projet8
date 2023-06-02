@@ -13,14 +13,13 @@ export default function FicheLogement() {
 
 	const [pickedAppart, setPickedAppart] = useState();
 	useEffect(() => {
-    const getData =  () => {			
-        const picked = logements.find(({ id }) => id === params.id);
-        if (picked === undefined) {
-            navigate("/404", { state: { message: "Can't get data" } });
-        } else {
-            setPickedAppart(picked);
-        }
-    };
+		const getData =  () => {			
+			const picked = logements.find(({ id }) => id === params.id);
+			logements.map(() => setPickedAppart(picked));
+			if (picked === undefined) {
+				navigate("/404", { state: { message: "Can't get data" } }); //renvoi vers la page 404 en cas d'URL de logement invalide
+			}
+		};
 		getData();
 		// eslint-disable-next-line
 	}, []); // array vide du useEffect pour ne lancer qu'une seule fois

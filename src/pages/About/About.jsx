@@ -4,16 +4,19 @@ import aboutArray from "../../datas/aboutArray.json"; // j'ai créé un fichier 
 
 export default function About() {
 	return (
-		<>
-			<AboutBanner />
-			{aboutArray.map((rule, id) => (
-				<Collapse
-					key={id}
-					aboutTitle={rule.aboutTitle}
-					aboutText={rule.aboutText}
-					aboutStyle="about-style"
-				/>
-			))}
-		</>
+	  <>
+		{/* Affichage de la bannière "AboutBanner" */}
+		<AboutBanner />
+		{/* Le tableau array du fichier json créé */}
+		{aboutArray.map((rule, id) => (
+		  <Collapse
+			key={id}
+			aboutTitle={rule.aboutTitle}
+			aboutText={rule.aboutText}
+			aboutStyle="about-style"
+		  />
+		))}
+	  </>
 	);
-}
+  }
+  

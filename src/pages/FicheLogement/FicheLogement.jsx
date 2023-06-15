@@ -45,8 +45,8 @@ export default function FicheLogement() {
         <section className="hostInfo-container"> {/* Section contenant les informations sur l'hôte et le titre*/}
           <div className="title-tags-container"> {/* Conteneur pour le titre et les tags*/}
             <div className="title-container redFont"> {/* Conteneur pour le titre du logement*/}
-              <h1>{pickedAppart.title}</h1> / Affichage du titre du logement
-              <h3>{pickedAppart.location}</h3> /{/* Affichage de l'emplacement du logement*/}
+              <h1>{pickedAppart.title}</h1> {/* Affichage du titre du logement*/}
+              <h3>{pickedAppart.location}</h3> {/* Affichage de l'emplacement du logement*/}
             </div>
             <div className="tags-container"> {/* Conteneur pour les tags*/}
               {tags.map((tag) => (

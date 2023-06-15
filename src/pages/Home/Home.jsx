@@ -4,6 +4,7 @@ import Card from "../../components/Cards/Card";
 import { Link } from "react-router-dom";
 import logements from "../../logements.json"
 
+
 export default function Home() {
 	const [data, setData] = useState([]);
 
@@ -13,7 +14,7 @@ export default function Home() {
 
 	return (
 		<>
-			<Banner />
+			<Banner title="Chez vous, partout et ailleurs" />
 			<div className="cards-container">
 				{data.map((appart, id) => (
 					<div className="card_logement" key={id}>

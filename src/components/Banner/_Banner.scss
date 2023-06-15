@@ -1,4 +1,6 @@
 .banner-container {
+	background-image: url(../../assets/images/background-banner.png);
+	background-size: cover;
 	height: 111px;
 	@include small-radius;
 	@include flex-banner;

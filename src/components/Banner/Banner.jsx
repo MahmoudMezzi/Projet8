@@ -1,8 +1,8 @@
-export default function Banner() {
+export default function Banner(props) {
 	return (
-		<div className="banner-container">
+		<div style={props.BannerSrc?{backgroundImage : `url(${props.BannerSrc})`}:{}} className="banner-container">
 			<div className="banner-text-container">
-				<div className="banner-text">Chez vous, partout et ailleurs</div>
+				<div className="banner-text">{props.title}</div>
 			</div>
 		</div>
 	);
